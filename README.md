@@ -54,7 +54,7 @@ pip install -r requirements.txt
 ## 🚀 Usage
 
 ### Jupyter Notebook Version
-1. Open `enhanced_studygenie.ipynb` in Jupyter Notebook or JupyterLab
+1. Open `studygenie-ai-powered-study-assistant` in Jupyter Notebook or JupyterLab
 2. Run all cells in sequence
 3. The notebook will automatically load your API key from the `.env` file
 4. Upload your PDF document
