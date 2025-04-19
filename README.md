@@ -34,14 +34,29 @@ pip install -r requirements.txt
 
 3. Configure Google AI API:
    - Get your API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
-   - Set up your API key in the application
+   - Copy `.env.template` to `.env`:
+     ```bash
+     cp .env.template .env
+     ```
+   - Add your API key to the `.env` file:
+     ```
+     GOOGLE_API_KEY=your_api_key_here
+     ```
+   - The `.env` file is ignored by git to keep your API key secure
+
+## 🔐 Security Notes
+
+- Never commit your `.env` file or expose your API key
+- The `.gitignore` file is configured to exclude sensitive files
+- API keys are loaded securely from environment variables
+- All API key handling is done through the `config.py` module
 
 ## 🚀 Usage
 
 ### Jupyter Notebook Version
-1. Open `studygenie.ipynb` in Jupyter Notebook or JupyterLab
+1. Open `enhanced_studygenie.ipynb` in Jupyter Notebook or JupyterLab
 2. Run all cells in sequence
-3. Enter your Google AI API key when prompted
+3. The notebook will automatically load your API key from the `.env` file
 4. Upload your PDF document
 5. Start asking questions or generating study materials
 
@@ -52,7 +67,6 @@ streamlit run app.py
 ```
 2. Access the web interface through your browser
 3. Follow the on-screen instructions to:
-   - Configure your API key
    - Upload PDF documents
    - Ask questions
    - Generate study materials
@@ -85,6 +99,7 @@ graph TD
   - google-generativeai
   - python-docx
   - ipywidgets
+  - python-dotenv
 
 - **Web Interface**:
   - streamlit
@@ -113,7 +128,6 @@ graph TD
 - Document chunk size: 1000 characters
 - Chunk overlap: 200 characters
 - Vector similarity search: Top 5 most relevant chunks
-
 
 ## 🙏 Acknowledgments
 

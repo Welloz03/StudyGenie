@@ -1,0 +1,57 @@
+# Environment variables and secrets
+.env
+*.env
+.env.*
+
+# API keys and credentials
+*_key.json
+*_key.txt
+*_key.yaml
+*_key.yml
+*_key.ini
+*_key.cfg
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Project specific
+faiss_index/
+*.pdf
+*.docx 
